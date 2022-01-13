@@ -1,9 +1,10 @@
 //expect gives us a natural way to write assertions
-//import {expect} from "chai";
-//import  {getPropertyWithDefault} from "./index";
-require ("./index")
 import mocha from 'mocha'
-import { assert, expect } from 'chai'
+import chai from "chai";
+
+import getPropertyWithDefault from "./index"
+
+
 
 //describe gives us the possibility to group related tests together
 //it allows us to specify individual tests
@@ -15,16 +16,19 @@ mocha.describe ('getPropertyWithDefault - basic functionality', () => {
 
 
         const person = {name: 'John Doe', age: 30, hairColor: 'brown'}
-        const actual = GetPropertyWithDefault(
+        const actual = getPropertyWithDefault(
             'name',
             'N/A',
-                person
+            person
         )
-        const expected = 'nöö'
+        console.log(actual)
+        const expected = 'John Doe'
         //Mocha will mark this test as failed if it fails
 
         chai.expect(actual).to.equal(expected)
     })
 
     })
+
+//https://docs.next.tech/creator/how-tos/testing-techniques/testing-es6-code-with-mocha-and-babel
 

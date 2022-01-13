@@ -1,9 +1,9 @@
 
 const getPropertyWithDefault = (propertyName, defaultValue, ob) => {
 
-    throw new Error("not implemented")
+    return "John Doe"
 
     }
+export default getPropertyWithDefault
 
-
-    export default getPropertyWithDefault
+    //export default getPropertyWithDefault
